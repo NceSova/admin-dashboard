@@ -2,11 +2,13 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  border: 1px solid #000;
 }
 
 :root {
   --color-primary: #ef4444;
   --color-light: white;
+  --color-background: #e2e8f0;
 }
 
 body {
@@ -18,7 +20,7 @@ body {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 5fr;
+  grid-template-rows: 1fr 6fr;
 }
 
 .sidebar {
@@ -47,10 +49,64 @@ body {
 
 .header {
   display: grid;
+  padding: 0px 32px;
   grid-column: 2 / -1;
+  grid-template-rows: 1fr 1fr;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & span {
+    padding: 0px 8px;
+  }
+
+  & * {
+    display: flex;
+    align-items: center;
+  }
+
+  & input {
+    border: none;
+    background-color: var(--color-background);
+    height: 30px;
+    width: 40vw;
+    padding-left: 8px;
+    border-radius: 25px;
+  }
+
+  .profile {
+    display: flex;
+    gap: 8px;
+  }
+}
+
+.header-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .greetings {
+    display: flex;
+    gap: 8px;
+  }
+  .buttons ul {
+    display: flex;
+    gap: 16px;
+    list-style: none;
+  }
+  button {
+    padding: 8px;
+    border: none;
+    border-radius: 15px;
+    color: var(--color-light);
+    background-color: var(--color-primary);
+  }
 }
 
 .main-content {
+  background-color: var(--color-background);
   display: grid;
   grid-column: 2 / -1;
   grid-row: 2 / -1;
