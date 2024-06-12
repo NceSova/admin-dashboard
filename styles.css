@@ -112,6 +112,39 @@ img {
 .main-content {
   background-color: var(--color-background);
   display: grid;
+  padding: 16px;
+  grid-template-columns: 2.5fr 1fr;
   grid-column: 2 / -1;
   grid-row: 2 / -1;
+}
+
+.projects {
+  grid-column: 1;
+}
+
+.info {
+  grid-column: 2;
+  padding: 8px;
+}
+
+.announcements {
+  display: grid;
+  grid-template-rows: 1fr 7fr;
+}
+
+.announcements-container {
+  display: flex;
+  background-color: #fff;
+  border-radius: 10px;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px;
+}
+
+.item {
+  & p {
+    text-wrap: wrap;
+    max-width: 40ch;
+    font-size: 0.7rem;
+  }
 }
